@@ -1,0 +1,21 @@
+[
+{
+  "modid" : "buddycam",
+  "name" : "BuddyCam",
+  "version" : "1.7.10 a",
+  "url" : "http://www.minecraftforum.net/topic/1126542-151-buddycam-minecraft-mod-by-romibi/",
+  "credits" : "See Forum",
+  "authors": [
+    "romibi"
+  ],
+  "description": "With Buddycam you can view your Friends View in Multiplayer, if he/she allows it.",
+  "logoFile" : "assets/buddycam/logo.png",
+  "updateUrl" : "http://www.minecraftforum.net/topic/1126542-151-buddycam-minecraft-mod-by-romibi/",
+  "parent" : "",
+  "screenshots": [
+  ],
+  "dependencies": [
+    "mod_MinecraftForge"
+  ]
+}
+]
