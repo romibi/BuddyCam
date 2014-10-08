@@ -11,6 +11,7 @@
   "description": "With Buddycam you can view your Friends View in Multiplayer, if he/she allows it.",
   "logoFile" : "assets/buddycam/logo.png",
   "updateUrl" : "http://www.minecraftforum.net/topic/1126542-151-buddycam-minecraft-mod-by-romibi/",
+  "credits" : "Using simple-xml-2.7.jar",
   "parent" : "",
   "screenshots": [
   ],
