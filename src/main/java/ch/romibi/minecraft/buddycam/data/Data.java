@@ -7,13 +7,14 @@ import org.simpleframework.xml.*;
 import org.simpleframework.xml.core.Persister;
 
 import ch.romibi.minecraft.buddycam.cam.*;
+import ch.romibi.minecraft.buddycam.gui.Screen;
 
 @Root
 public class Data {
 	private File file;
 	
 	@ElementList
-	public List<Cam> screens; //TODO: not list -> map
+	public List<Screen> screens; //TODO: not list -> map
 	
 	private Data() {
 	}

@@ -34,6 +34,14 @@ shadow {
         pattern = 'data'
         shadedPattern = 'ch.romibi.minecraft.buddycam.data'
     }
+    relocation {
+        pattern = 'gui'
+        shadedPattern = 'ch.romibi.minecraft.buddycam.gui'
+    }
+    relocation {
+        pattern = 'helper'
+        shadedPattern = 'ch.romibi.minecraft.buddycam.helper'
+    }
 }
 
 apply plugin: 'forge'
@@ -44,7 +52,7 @@ archivesBaseName = "buddycam"
 
 minecraft {
     version = "1.7.10-10.13.1.1222"
-    assetDir = "eclipse/assets"
+    runDir = "eclipse"
 }
 
 dependencies {

@@ -9,7 +9,11 @@ public class Cam {
 	@Element
 	public boolean enabled = true;
 	
-	public void render() {
-		//TODO: render-code
+	public void getImage() {
+		//TODO: return texture
+	}
+	
+	public void updateImage() {
+		//TODO: (re)render View
 	}
 }
