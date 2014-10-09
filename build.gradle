@@ -1,0 +1,97 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:0.8'
+    }
+}
+
+apply plugin: 'shadow'
+
+shadow {
+    classifier = 'mod'
+
+    artifactSet {
+        include 'ch.romibi.minecraft.buddycam'
+    }
+    relocation {
+        pattern = 'cam'
+        shadedPattern = 'ch.romibi.minecraft.buddycam.cam'
+    }
+    relocation {
+        pattern = 'data'
+        shadedPattern = 'ch.romibi.minecraft.buddycam.data'
+    }
+}
+
+apply plugin: 'forge'
+
+version = "1.7.10 a"
+group= "ch.romibi.minecraft.buddycam" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "buddycam"
+
+minecraft {
+    version = "1.7.10-10.13.1.1222"
+    assetDir = "eclipse/assets"
+}
+
+dependencies {
+    // you may put jars on which you depend on in ./libs
+    // or you may define them like so..
+    //compile "some.group:artifact:version:classifier"
+    //compile "some.group:artifact:version"
+      
+    // real examples
+    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
+    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
+
+    // for more info...
+    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
+    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+}
+
+processResources
+{
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+// Include external libs in compilation and jar
+configurations {
+    external
+    compile.extendsFrom external
+}
+
+dependencies {
+    external 'org.simpleframework:simple-xml:2.7.1'
+}
+
+jar {
+    from { configurations.external.collect { it.isDirectory() ? it : zipTree(it) } }
+}

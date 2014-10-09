@@ -1,20 +1,10 @@
 # Ignore Forge-Files
-.gradle/*
-gradle/*
-.settings/*
-bin/*
-build/*
-build.gradle
-CREDITS-fml.txt
-forge-*-changelog.txt
-gradlew
-gradlew.bat
-LICENSE-fml.txt
-MinecraftForge-Credits.txt
-MinecraftForge-License.txt
-README.txt
+.gradle
+.settings
+build
+bin
 
 #  Ignore all Eclipse-Files except Run-Configurations
 .classpath
 .project
-eclipse/*
+eclipse
