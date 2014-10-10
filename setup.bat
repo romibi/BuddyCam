@@ -3,8 +3,11 @@ echo copy .eclipse_clean to eclipse
 xcopy .eclipse_clean eclipse\ /E /D /Y > .tmp
 del .tmp
 attrib -H eclipse
-echo gradlew.bat setupDecompWorkspace
-gradlew.bat setupDecompWorkspace
-echo gradlew.bat eclipse
-gradlew.bat eclipse
-pause
+attrib +H .*
+attrib +H .settings
+attrib +H .gradle
+attrib +H *.sh
+attrib +H gradlew
+attrib -H .gitignore
+echo gradlew.bat setupDecompWorkspace eclipse
+gradlew.bat setupDecompWorkspace eclipse
