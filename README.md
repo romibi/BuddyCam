@@ -25,15 +25,13 @@ This is an Open Source reboot of BuddyCam. A Minecraft-Mod which allows you to s
 5. Setup Workspace
   - Windows:
     1. Shift-Right-Click in the Folder and "Open Command Window here"
-    2. gradlew.bat setupDecompWorkspace
-    3. gradlew.bat eclipse
+    2. setup.bat
   - Linux/Mac:
     1. Open the Terminal
     2. Go to the correct Directory with cd
-    3. If necesary: sudo chmod +x gradlew
-    4. ./gradlew setupDecompWorkspace
-    5. ./gradlew eclipse
+    3. ./setup.sh
+    4. If it doesn't work: *sudo chmod +x setup.sh* and *sudo chmod +x gradlew* and repeat c
 6. Open the eclipse-Folder with Eclipse
 7. Develop
-8. run gradlew.bat compile or ./gradlew compile (see 5.)
+8. run *gradlew.bat compile* or *./gradlew compile* (see 5.)
 9. Optional: Commit/Pull request
