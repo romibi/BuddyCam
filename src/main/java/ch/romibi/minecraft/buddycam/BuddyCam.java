@@ -9,6 +9,7 @@ import ch.romibi.minecraft.buddycam.data.Data;
 import ch.romibi.minecraft.buddycam.gui.Screen;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.Mod;
@@ -69,7 +70,9 @@ public class BuddyCam {
     @SubscribeEvent(priority=EventPriority.LOWEST)
 	public void onRender(RenderGameOverlayEvent.Post event)
 	{
-    	renderScreens();
+    	if(event.type == ElementType.ALL) {
+    		renderScreens();
+    	}
     }
 
     /**

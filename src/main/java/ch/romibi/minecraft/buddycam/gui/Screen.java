@@ -37,9 +37,8 @@ public class Screen {
 	private ResourceLocation bgTexture;
 	
 	static {
-		//aviableScreenTextures.put(1.33f, "buddycam:textures/screen_4_3.png");
-		//aviableScreenTextures.put(1.77f, "buddycam:textures/screen_16_9.png");
-		aviableScreenTextures.put(1.77f, "buddycam:textures/screen_green.png");
+		aviableScreenTextures.put(1.33f, "buddycam:textures/screen_4_3.png");
+		aviableScreenTextures.put(1.77f, "buddycam:textures/screen_16_9.png");
 	}
 	
 	/* Different Variants of Width and Height */
