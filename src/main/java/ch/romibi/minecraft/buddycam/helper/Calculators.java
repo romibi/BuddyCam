@@ -2,8 +2,6 @@ package ch.romibi.minecraft.buddycam.helper;
 
 import net.minecraft.client.Minecraft;
 
-import org.lwjgl.util.vector.Vector;
-
 import ch.romibi.minecraft.buddycam.data.SimpleTuple;
 
 public class Calculators {

@@ -6,7 +6,6 @@ import java.util.List;
 import org.simpleframework.xml.*;
 import org.simpleframework.xml.core.Persister;
 
-import ch.romibi.minecraft.buddycam.cam.*;
 import ch.romibi.minecraft.buddycam.gui.Screen;
 
 @Root

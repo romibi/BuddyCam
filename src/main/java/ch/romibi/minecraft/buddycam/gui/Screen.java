@@ -5,7 +5,6 @@ import java.util.Map;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
@@ -16,7 +15,6 @@ import ch.romibi.minecraft.buddycam.data.ResolutionType;
 import static ch.romibi.minecraft.buddycam.data.ResolutionType.*;
 import static ch.romibi.minecraft.buddycam.helper.GLHelper.*;
 
-import org.lwjgl.*;
 import org.lwjgl.opengl.GL11;
 
 @Root
