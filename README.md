@@ -10,10 +10,8 @@ This is an Open Source reboot of BuddyCam. A Minecraft-Mod which allows you to s
 ## How to help development
 
 ###Rules:
-- do not implement new functions yet...
-	I want to make sure most of the old 1.6.2 functionality is re-implemented
-- contact me
-	I know that's a bit tricky ...
+- do not implement new functions yet... (I want to make sure most of the old 1.6.2 functionality is re-implemented)
+- contact me (I know that's a bit tricky...)
 
 ###How to setup and use the workspace:
 (I really hope you have already done 1-3...)
